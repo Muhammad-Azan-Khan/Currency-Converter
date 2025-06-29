@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="mainText">
+
+      <h1>CURRENCY</h1>
+      <h1 id="converterText">CONVERTER</h1>
+
+    </div>
+
+    <!-- ---------------------------------------------------------- -->
+
+    <div class="mainBox">
+
+        <div class="heading">
+
+             <p id="one">CURRENCY CONVERTER</p>
+
+        </div>
+
+      <!-- ------------------------------------ -->
+      <div class="firstBox">
+
+            <div class="from">
+
+          <img src="https://flagsapi.com/US/flat/64.png" id="fromFlag" />
+          <select name="firstDropDown" class="fromDropDown select"></select>
+
+             </div>
+
+        <input type="text" value="" class="fromValue" />
+
+      </div>
+      <!-- ------------------------------------ -->
+
+      <div class="exchangeLogo">
+        <i class="fa-solid fa-arrow-down" id="logo"></i>
+      </div>
+      <!-- ------------------------------------ -->
+      <div class="secondBox">
+
+        <div class="to">
+
+          <img src="https://flagsapi.com/PK/flat/64.png" id="toFlag" />
+          <select name="secondDropDown" class="toDropDown select"></select>
+          
+        </div>
+
+        <p class="toValue"></p>
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <div class="exchangeRate">
+        <p id="two"><b>EXCHANGE RATE</b></p>
+      </div>
+      <!-- ------------------------------------ -->
+
+      <div class="rate">
+        <p>1 USD = 283.49 PKR</p>
+      </div>
+
+      <!-- ------------------------------------ -->
+    </div>
+
+    <script src="/function.js"></script>
+  </body>
+</html>
