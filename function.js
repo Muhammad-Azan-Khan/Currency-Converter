@@ -223,13 +223,13 @@ const updateFlag = (element) => {
      }
 };
 
+//****************************************************************************** 
+
 let fromChangeRate = document.querySelector(".fromValue");
 
-fromChangeRate.addEventListener("keypress", async () => {
+const convCurrency = async () =>{
 
-  if (event.key == "Enter") 
-    {
-        if (fromChangeRate.value == null || fromChangeRate.value <= 0) 
+         if (fromChangeRate.value == null || fromChangeRate.value <= 0) 
             {
              fromChangeRate.value = "Invalid! ";
              fromChangeRate.disabled = true;
@@ -251,11 +251,29 @@ fromChangeRate.addEventListener("keypress", async () => {
              displayAns.innerText = showAns;
              displayRate.innerText = `1 ${selectedCurrency} = ${ans.toFixed(3)} ${toCountry}`;
              }
-    } 
-});
+}
 
 fromChangeRate.addEventListener("click", () => {
   fromChangeRate.value = null;
   displayAns.innerText = null;
 });
+
+
+fromChangeRate.addEventListener("keypress",(event)=>{
+
+    if(event.key=="Enter"){
+        convCurrency();
+    }
+})
+
+
+let debounceTimer;
+
+fromChangeRate.addEventListener("input", () => {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    convCurrency();
+  }, 800);
+});
+//****************************************************************************** 
 
