@@ -223,8 +223,11 @@ select {
   .toValue {
     font-size: 20px;
     margin-left: auto;
+    margin-right: 10px;
   }
-
+  .fromValue{
+    margin-right: 10px;
+  }
   .exchangeLogo {
     margin: 15px auto;
     position: static;
@@ -261,6 +264,13 @@ select {
   }
 
   .toValue {
-    font-size: 18px;
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+  .fromValue{
+    font-size: 22px;
+    margin-right: 10px;
+    width: 150px;
   }
 }
